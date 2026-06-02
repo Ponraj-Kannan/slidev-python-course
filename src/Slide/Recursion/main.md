@@ -1,7 +1,3 @@
-<style>
-    @import "./main.css";
-</style>
-
 ---
 src: ./slide2.md
 ---
