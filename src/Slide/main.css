@@ -2,7 +2,6 @@
    GLOBAL DESIGN SYSTEM — matches Slide2.vue palette
    ============================================================ */
 
-/* ── Design tokens ───────────────────────────────────────── */
 :root {
   --red: #ef5050;
   --red-dark: #c73c3c;
@@ -19,14 +18,12 @@
   --orange: #dd6b20;
   --blue: #3182ce;
   --yellow: #d69e2e;
-  --purple: #805ad5;
   --shadow-sm: 0 1px 4px rgba(0, 0, 0, .08);
   --shadow-md: 0 4px 16px rgba(0, 0, 0, .12);
   --radius: 10px;
   --radius-lg: 16px;
 }
 
-/* ── Base layout ─────────────────────────────────────────── */
 .slidev-layout {
   font-family: 'Nunito', sans-serif;
   background: var(--bg);
@@ -109,14 +106,7 @@
   padding: 14px 18px;
 }
 
-.card-purple {
-  background: #faf5ff;
-  border: 1px solid var(--purple);
-  border-radius: var(--radius);
-  padding: 14px 18px;
-}
-
-/* ── Pills ───────────────────────────────────────────────── */
+/* ── Pill ────────────────────────────────────────────────── */
 .pill {
   display: inline-block;
   padding: 4px 14px;
@@ -151,11 +141,6 @@
   color: var(--blue);
 }
 
-.pill-purple {
-  background: #faf5ff;
-  color: var(--purple);
-}
-
 /* ── Section label ───────────────────────────────────────── */
 .section-label {
   font-size: 0.62rem;
@@ -164,168 +149,6 @@
   letter-spacing: 2px;
   color: var(--red);
   margin-bottom: 4px;
-}
-
-/* ── Typography ──────────────────────────────────────────── */
-.slide-h1 {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: var(--navy);
-  line-height: 1.2;
-}
-
-.slide-h2 {
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: var(--navy);
-}
-
-.slide-h3 {
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: var(--navy-mid);
-}
-
-.body-text {
-  font-size: 0.78rem;
-  color: var(--slate);
-  line-height: 1.6;
-}
-
-.small-text {
-  font-size: 0.68rem;
-  color: var(--muted);
-}
-
-.highlight {
-  color: var(--red);
-  font-weight: 600;
-}
-
-.mono {
-  font-family: 'Fira Code', monospace;
-}
-
-/* ── Grid helpers ────────────────────────────────────────── */
-.g2 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
-}
-
-.g3 {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 10px;
-}
-
-.g4 {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: 8px;
-}
-
-.flex-row {
-  display: flex;
-  gap: 10px;
-  align-items: flex-start;
-}
-
-.flex-col {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-/* ── Icon circle ─────────────────────────────────────────── */
-/* Last definition: font-size 1.3rem, no font-weight, no color on base */
-.icon-circle {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.3rem;
-  flex-shrink: 0;
-}
-
-/* Last definitions: background only (color removed from base variants) */
-.ic-red {
-  background: var(--red-soft);
-}
-
-.ic-navy {
-  background: #eef0f8;
-}
-
-.ic-green {
-  background: #f0fff4;
-}
-
-.ic-orange {
-  background: #fffaf0;
-}
-
-.ic-blue {
-  background: #ebf8ff;
-}
-
-.ic-purple {
-  background: #faf5ff;
-  color: var(--purple);
-}
-
-/* ── Callouts ────────────────────────────────────────────── */
-.callout {
-  display: flex;
-  gap: 10px;
-  align-items: flex-start;
-  padding: 10px 14px;
-  border-radius: var(--radius);
-  font-size: 0.75rem;
-}
-
-.callout-info {
-  background: #ebf8ff;
-  border: 1px solid var(--blue);
-}
-
-.callout-warn {
-  background: #fffaf0;
-  border: 1px solid var(--orange);
-}
-
-.callout-success {
-  background: #f0fff4;
-  border: 1px solid var(--green);
-}
-
-.callout-danger {
-  background: var(--red-soft);
-  border: 1px solid var(--red);
-}
-
-/* ── Progress dots ───────────────────────────────────────── */
-.topic-progress {
-  display: flex;
-  gap: 5px;
-  align-items: center;
-}
-
-.tp-dot {
-  width: 28px;
-  height: 6px;
-  border-radius: 3px;
-  background: var(--border);
-}
-
-.tp-dot.active {
-  background: var(--red);
-}
-
-.tp-dot.done {
-  background: var(--red-dark);
 }
 
 /* ── Output box ──────────────────────────────────────────── */
@@ -346,17 +169,6 @@
 
 .output-box .comment {
   color: #6b7280;
-}
-
-/* ── Code block ──────────────────────────────────────────── */
-.code-block {
-  background: #f6f8fa;
-  border-radius: var(--radius);
-  border: 1px solid #e1e4e8;
-  padding: 14px 16px;
-  font-family: 'Fira Code', monospace;
-  font-size: 0.72rem;
-  line-height: 1.9;
 }
 
 /* ── Step flow ───────────────────────────────────────────── */
@@ -503,7 +315,162 @@
   font-family: 'Nunito', sans-serif;
 }
 
-/* ── Trace table ─────────────────────────────────────────── */
+/* ── Icon circle ─────────────────────────────────────────── */
+.icon-circle {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  flex-shrink: 0;
+}
+
+.ic-red {
+  background: var(--red-soft);
+}
+
+.ic-navy {
+  background: #eef0f8;
+}
+
+.ic-green {
+  background: #f0fff4;
+}
+
+.ic-orange {
+  background: #fffaf0;
+}
+
+.ic-blue {
+  background: #ebf8ff;
+}
+
+/* ── Grid helpers ────────────────────────────────────────── */
+.g2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.g3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
+
+.g4 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 8px;
+}
+
+.flex-row {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* ── Typography ──────────────────────────────────────────── */
+.slide-h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--navy);
+  line-height: 1.2;
+}
+
+.slide-h2 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--navy);
+}
+
+.slide-h3 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--navy-mid);
+}
+
+.body-text {
+  font-size: 0.78rem;
+  color: var(--slate);
+  line-height: 1.6;
+}
+
+.small-text {
+  font-size: 0.68rem;
+  color: var(--muted);
+}
+
+.highlight {
+  color: var(--red);
+  font-weight: 600;
+}
+
+.mono {
+  font-family: 'Fira Code', monospace;
+}
+
+/* ── Callout ─────────────────────────────────────────────── */
+.callout {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  padding: 10px 14px;
+  border-radius: var(--radius);
+  font-size: 0.75rem;
+}
+
+.callout-info {
+  background: #ebf8ff;
+  border: 1px solid var(--blue);
+}
+
+.callout-warn {
+  background: #fffaf0;
+  border: 1px solid var(--orange);
+}
+
+.callout-success {
+  background: #f0fff4;
+  border: 1px solid var(--green);
+}
+
+.callout-danger {
+  background: var(--red-soft);
+  border: 1px solid var(--red);
+}
+
+/* ── Progress dots ────────────────────────────────────────── */
+.topic-progress {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.tp-dot {
+  width: 28px;
+  height: 6px;
+  border-radius: 3px;
+  background: var(--border);
+}
+
+.tp-dot.active {
+  background: var(--red);
+}
+
+.tp-dot.done {
+  background: var(--red-dark);
+}
+
+/* ── Loop trace table ─────────────────────────────────────── */
 .trace-table {
   width: 100%;
   border-collapse: collapse;
@@ -529,14 +496,13 @@
   background: #f7f8fc;
 }
 
-/* Last definition: background is var(--slate) */
 .trace-table .hl {
   background: var(--slate);
   color: var(--red-dark);
   font-weight: 600;
 }
 
-/* ── Flow nodes ──────────────────────────────────────────── */
+/* ── Flowchart nodes ──────────────────────────────────────── */
 .flow-node {
   padding: 8px 16px;
   border-radius: 8px;
@@ -552,7 +518,6 @@
   border-radius: 20px;
 }
 
-/* Last definition: includes transform: rotate(0deg) */
 .flow-cond {
   background: #fffaf0;
   color: var(--orange);
@@ -573,18 +538,6 @@
   border-radius: 20px;
 }
 
-.flow-call {
-  background: #ebf8ff;
-  color: var(--blue);
-  border-color: var(--blue);
-}
-
-.flow-return {
-  background: #faf5ff;
-  color: var(--purple);
-  border-color: var(--purple);
-}
-
 .flow-arrow {
   text-align: center;
   color: var(--muted);
@@ -602,39 +555,7 @@
   min-width: 120px;
 }
 
-/* ── Stack frames ────────────────────────────────────────── */
-.stack-frame {
-  background: var(--white);
-  border: 2px solid var(--blue);
-  border-radius: 6px;
-  padding: 6px 12px;
-  font-family: 'Fira Code', monospace;
-  font-size: 0.7rem;
-  margin-bottom: 4px;
-  text-align: center;
-  color: var(--navy);
-}
-
-.stack-frame.top {
-  border-color: var(--red);
-  background: var(--red-soft);
-  color: var(--red-dark);
-}
-
-.stack-frame.done {
-  border-color: var(--green);
-  background: #f0fff4;
-  color: #276749;
-}
-
-.stack-frame.middle {
-  border-color: var(--orange);
-  background: #fffaf0;
-  color: #c05621;
-}
-
 /* ── Memory box ──────────────────────────────────────────── */
-/* Last definition: structural table-style layout */
 .mem-box {
   border: 2px solid var(--border);
   border-radius: var(--radius);
@@ -704,66 +625,4 @@
   border-left: 1px solid var(--border);
   display: flex;
   align-items: center;
-}
-
-/* ── Memory variants (simple card style) ─────────────────── */
-.mem-box .mem-label {
-  font-size: 0.6rem;
-  font-weight: 600;
-  color: var(--muted);
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 4px;
-}
-
-.mem-local {
-  border-color: var(--blue);
-  background: #ebf8ff;
-}
-
-.mem-global {
-  border-color: var(--green);
-  background: #f0fff4;
-}
-
-/* ── Recursion tree ──────────────────────────────────────── */
-.rec-tree {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2px;
-}
-
-.rec-node {
-  padding: 5px 14px;
-  border-radius: 20px;
-  font-family: 'Fira Code', monospace;
-  font-size: 0.68rem;
-  font-weight: 600;
-  border: 2px solid transparent;
-  white-space: nowrap;
-}
-
-.rec-node-call {
-  background: #ebf8ff;
-  border-color: var(--blue);
-  color: #2b6cb0;
-}
-
-.rec-node-base {
-  background: #f0fff4;
-  border-color: var(--green);
-  color: #276749;
-}
-
-.rec-node-return {
-  background: #faf5ff;
-  border-color: var(--purple);
-  color: #553c9a;
-}
-
-.rec-connector {
-  color: var(--muted);
-  font-size: 0.9rem;
-  font-weight: 600;
 }
