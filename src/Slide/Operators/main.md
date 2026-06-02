@@ -1,6 +1,3 @@
-<style>
-    @import "../main.css";
-</style>
 
 ---
 src: ./slide44.md
