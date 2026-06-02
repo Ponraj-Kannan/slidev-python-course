@@ -553,3 +553,75 @@
   text-align: center;
   min-width: 120px;
 }
+
+/* ── Memory box ──────────────────────────────────────────── */
+.mem-box {
+  border: 2px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  font-family: 'Fira Code', monospace;
+  font-size: 0.72rem;
+}
+
+.mem-box .mem-header {
+  background: var(--slate);
+  color: #fff;
+  padding: 4px 12px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.mem-box .mem-row {
+  display: flex;
+  align-items: stretch;
+  border-bottom: 1px solid var(--border);
+}
+
+.mem-box .mem-row:last-child {
+  border-bottom: none;
+}
+
+.mem-box .mem-addr {
+  background: #f0f4ff;
+  color: var(--navy-mid);
+  padding: 6px 10px;
+  font-size: 0.62rem;
+  min-width: 80px;
+  border-right: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+}
+
+.mem-box .mem-name {
+  background: var(--red-soft);
+  color: var(--red-dark);
+  padding: 6px 10px;
+  font-weight: 700;
+  min-width: 70px;
+  border-right: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+}
+
+.mem-box .mem-val {
+  background: #f0fff4;
+  color: var(--green);
+  padding: 6px 12px;
+  font-weight: 700;
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.mem-box .mem-type {
+  background: #fffaf0;
+  color: var(--orange);
+  padding: 6px 10px;
+  font-size: 0.62rem;
+  min-width: 60px;
+  border-left: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+}
