@@ -92,7 +92,7 @@ async function handleLogout() {
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
 
-  /* background-color: rgb(100, 74, 158); */
+  background-color: #ffffff;
 }
 
 .fp-module {
