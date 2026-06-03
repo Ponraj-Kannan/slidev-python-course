@@ -36,7 +36,7 @@ defineProps({
   overflow-x: auto;
   overflow-y: auto;
   scrollbar-width: none;
-  padding-bottom: 30px;
+  padding-bottom: 100px;
 }
 .slide-body {
   display: flex;
