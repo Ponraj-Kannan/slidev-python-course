@@ -64,7 +64,7 @@ defineProps({
   margin-top: -10px;
   margin-left: -30px;
   width: 107%;
-  height: 65vh;
+  height: 60vh;
   font-size: 0.8rem;
   font-weight: 400;
   overflow-x: auto;
@@ -124,9 +124,11 @@ defineProps({
   margin-top: 10px;
 }
 
+/* ---------------------------------------------- Edit Here! ---------------------------------------------- */
+
 .col-editor {
   width: 65%;
-  height: 50vh;
+  height: 46vh;
   /* background-color: palevioletred; */
 }
 
@@ -145,7 +147,6 @@ defineProps({
   background-color: #ef50505a;
   border: 1px solid #ef5050;
   margin-top: 10px;
-
 }
 
 .info-card {
