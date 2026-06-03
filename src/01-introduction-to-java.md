@@ -7,7 +7,7 @@ src: ./Slide/Operators/main.md
 ---
 
 ---
-src: ./Slide/Decision making/main.md
+src: ./Slide/Decision_making/main.md
 ---
 
 ---
