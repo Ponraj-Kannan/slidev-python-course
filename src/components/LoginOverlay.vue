@@ -7,6 +7,8 @@ const ADMIN_EMAILS = [
   'gunatamil123@gmail.com'
 ]
 
+const SUPER_ADMIN = 'ponrajacc@gmail.com'
+
 // Sync auth state with DOM body/html classes to hide/show slides securely
 watchEffect(() => {
   if (typeof document !== 'undefined') {
@@ -46,10 +48,17 @@ const parsedEmailsPreview = computed(() => {
 
 const filteredEmails = computed(() => {
   const sorted = [...authState.allowedEmails].sort((a, b) => {
-    const aIsAdmin = ADMIN_EMAILS.includes(a.toLowerCase())
-    const bIsAdmin = ADMIN_EMAILS.includes(b.toLowerCase())
+    const aLower = a.toLowerCase()
+    const bLower = b.toLowerCase()
+    // Super admin always first
+    if (aLower === SUPER_ADMIN && bLower !== SUPER_ADMIN) return -1
+    if (bLower === SUPER_ADMIN && aLower !== SUPER_ADMIN) return 1
+    // Other admins before regular users
+    const aIsAdmin = ADMIN_EMAILS.includes(aLower)
+    const bIsAdmin = ADMIN_EMAILS.includes(bLower)
     if (aIsAdmin && !bIsAdmin) return -1
     if (!aIsAdmin && bIsAdmin) return 1
+    // Alphabetical within each group
     return a.localeCompare(b)
   })
 
@@ -118,7 +127,7 @@ async function fetchWhitelistedEmails() {
     if (local) {
       authState.allowedEmails = JSON.parse(local)
     } else {
-      authState.allowedEmails = ['ponraij@gmail.com']
+      authState.allowedEmails = [...ADMIN_EMAILS]
       localStorage.setItem('fp_allowed_emails', JSON.stringify(authState.allowedEmails))
     }
   }
@@ -282,7 +291,7 @@ async function addEmail() {
 // Delete email (Admin only)
 async function removeEmail(emailToRemove) {
   if (ADMIN_EMAILS.includes(emailToRemove)) {
-    errorMessage.value = 'Cannot remove the primary administrator email.'
+    errorMessage.value = 'Cannot remove the super administrator email.'
     return
   }
 
@@ -554,11 +563,11 @@ onUnmounted(() => {
                 <li v-for="email in filteredEmails" :key="email" class="email-item">
                   <div class="email-details">
                     <span class="email-text">{{ email }}</span>
-                    <span v-if="ADMIN_EMAILS.includes(email)" class="badge-admin">Admin</span>
-                    <button v-if="!ADMIN_EMAILS.includes(email)"/>
+                    <span v-if="email === SUPER_ADMIN" class="badge-admin">Admin</span>
+                    <span v-else-if="ADMIN_EMAILS.includes(email)" class="badge-admin">Admin</span>
                   </div>
                   <button 
-                    v-if="email !== 'ponraij@gmail.com'"
+                    v-if="!ADMIN_EMAILS.includes(email)"
                     @click="removeEmail(email)" 
                     class="delete-btn" 
                     title="Remove access"
