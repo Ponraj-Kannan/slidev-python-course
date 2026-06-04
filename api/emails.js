@@ -17,6 +17,12 @@ const firebaseConfig = {
 const firebaseApp = initializeApp(firebaseConfig)
 const db = getFirestore(firebaseApp)
 
+// Admin emails — must be kept in sync with ADMIN_EMAILS in LoginOverlay.vue
+const ADMIN_EMAILS = [
+  'ponrajacc@gmail.com',
+  'gunatamil123@gmail.com'
+]
+
 // Global cache in case filesystem is read-only (e.g. on Vercel)
 let inMemoryList = null
 
@@ -65,11 +71,7 @@ async function loadEmails() {
     console.error('Failed to read allowed-emails.json:', error)
   }
 
-  // Fallback to default admin email
-  const ADMIN_EMAILS = [
-    'ponrajacc@gmail.com',
-    'gunatamil123@gmail.com'
-  ]
+  // Fallback to default admin emails
   inMemoryList = [...ADMIN_EMAILS]
 
   try {
