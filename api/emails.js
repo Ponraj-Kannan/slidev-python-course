@@ -66,7 +66,12 @@ async function loadEmails() {
   }
 
   // Fallback to default admin email
-  inMemoryList = ['ponrajacc@gmail.com']
+  const ADMIN_EMAILS = [
+    'ponrajacc@gmail.com',
+    'gunatamil123@gmail.com'
+  ]
+  inMemoryList = [...ADMIN_EMAILS]
+
   try {
     const docRef = doc(db, 'whitelist', 'emails')
     await setDoc(docRef, { list: inMemoryList })
@@ -161,9 +166,9 @@ export default async function handler(req, res) {
       return res.status(403).json({ error: 'Forbidden: Google email is not verified' })
     }
 
-    // 2. ONLY ponrajacc@gmail.com can manage the email whitelist
-    if (requesterEmail !== 'ponrajacc@gmail.com') {
-      return res.status(403).json({ error: 'Forbidden: Only the primary administrator can manage allowed emails' })
+    // 2. ONLY ponraij@gmail.com can manage the email whitelist
+    if (!ADMIN_EMAILS.includes(requesterEmail)) {
+      return res.status(403).json({ error: 'Forbidden: Only administrators can manage allowed emails' })
     }
 
     // 3. Process actions
@@ -227,7 +232,7 @@ export default async function handler(req, res) {
       }
 
       const targetEmail = email.trim().toLowerCase()
-      if (targetEmail === 'ponrajacc@gmail.com') {
+      if (ADMIN_EMAILS.includes(targetEmail)) {
         return res.status(400).json({ error: 'Bad Request: Cannot delete the primary administrator email' })
       }
 
