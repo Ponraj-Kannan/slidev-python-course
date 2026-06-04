@@ -21,7 +21,7 @@ async function runTest() {
 
   try {
     console.log('Writing test emails to Firestore...')
-    await setDoc(docRef, { list: ['ponrajacc@gmail.com', 'test-user@gmail.com'] })
+    await setDoc(docRef, { list: ['ponraij@gmail.com'] })
     console.log('Write successful!')
 
     console.log('Reading emails back from Firestore...')
