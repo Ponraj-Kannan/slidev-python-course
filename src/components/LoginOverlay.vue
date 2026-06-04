@@ -2,6 +2,11 @@
 import { ref, computed, onMounted, onUnmounted, nextTick, watchEffect } from 'vue'
 import { authState, logout } from '../auth'
 
+const ADMIN_EMAILS = [
+  'ponrajacc@gmail.com',
+  'gunatamil123@gmail.com'
+]
+
 // Sync auth state with DOM body/html classes to hide/show slides securely
 watchEffect(() => {
   if (typeof document !== 'undefined') {
@@ -40,9 +45,17 @@ const parsedEmailsPreview = computed(() => {
 })
 
 const filteredEmails = computed(() => {
-  if (!searchQuery.value.trim()) return authState.allowedEmails
+  const sorted = [...authState.allowedEmails].sort((a, b) => {
+    const aIsAdmin = ADMIN_EMAILS.includes(a.toLowerCase())
+    const bIsAdmin = ADMIN_EMAILS.includes(b.toLowerCase())
+    if (aIsAdmin && !bIsAdmin) return -1
+    if (!aIsAdmin && bIsAdmin) return 1
+    return a.localeCompare(b)
+  })
+
+  if (!searchQuery.value.trim()) return sorted
   const q = searchQuery.value.trim().toLowerCase()
-  return authState.allowedEmails.filter(e => e.toLowerCase().includes(q))
+  return sorted.filter(e => e.toLowerCase().includes(q))
 })
 
 const isNotAllowed = ref(false)
@@ -105,7 +118,7 @@ async function fetchWhitelistedEmails() {
     if (local) {
       authState.allowedEmails = JSON.parse(local)
     } else {
-      authState.allowedEmails = ['ponrajacc@gmail.com']
+      authState.allowedEmails = ['ponraij@gmail.com']
       localStorage.setItem('fp_allowed_emails', JSON.stringify(authState.allowedEmails))
     }
   }
@@ -130,7 +143,7 @@ async function checkAuthSession() {
       authState.userName = savedName || ''
       authState.userPicture = savedPicture || ''
       authState.idToken = savedToken
-      authState.isAdmin = savedEmail.toLowerCase() === 'ponrajacc@gmail.com'
+      authState.isAdmin = ADMIN_EMAILS.includes(savedEmail.toLowerCase())
     } else {
       logout()
       errorMessage.value = `Session expired: Email '${savedEmail}' is no longer whitelisted.`
@@ -212,7 +225,7 @@ async function handleGoogleSignInCallback(response) {
     authState.userName = payload.name || ''
     authState.userPicture = payload.picture || ''
     authState.idToken = response.credential
-    authState.isAdmin = email === 'ponrajacc@gmail.com'
+    authState.isAdmin = ADMIN_EMAILS.includes(email)
 
     localStorage.setItem('fp_auth_token', response.credential)
     localStorage.setItem('fp_auth_email', email)
@@ -268,7 +281,7 @@ async function addEmail() {
 
 // Delete email (Admin only)
 async function removeEmail(emailToRemove) {
-  if (emailToRemove === 'ponrajacc@gmail.com') {
+  if (ADMIN_EMAILS.includes(emailToRemove)) {
     errorMessage.value = 'Cannot remove the primary administrator email.'
     return
   }
@@ -541,10 +554,11 @@ onUnmounted(() => {
                 <li v-for="email in filteredEmails" :key="email" class="email-item">
                   <div class="email-details">
                     <span class="email-text">{{ email }}</span>
-                    <span v-if="email === 'ponrajacc@gmail.com'" class="badge-admin">Primary Admin</span>
+                    <span v-if="ADMIN_EMAILS.includes(email)" class="badge-admin">Admin</span>
+                    <button v-if="!ADMIN_EMAILS.includes(email)"/>
                   </div>
                   <button 
-                    v-if="email !== 'ponrajacc@gmail.com'"
+                    v-if="email !== 'ponraij@gmail.com'"
                     @click="removeEmail(email)" 
                     class="delete-btn" 
                     title="Remove access"
@@ -730,6 +744,7 @@ onUnmounted(() => {
   background-repeat: no-repeat;
   background-position-x: 10%;
   padding: 50px;
+  background-color: #ffffffe1;
 }
 
 .page-loader-overlay {
