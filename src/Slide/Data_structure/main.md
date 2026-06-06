@@ -412,8 +412,3 @@ transition: slide-up
 src: ./slides/slide45.md
 transition: slide-up
 ---
-
----
-src: ./slides/slide46.md
-transition: slide-up
----
