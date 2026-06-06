@@ -1,10 +1,4 @@
-﻿---
-transition: slide-up
----
-
-<!-- ═══════════════════════════════════════════════════════
-     SLIDE 28 — SUMMARY (PART 1) — CORE CONCEPTS
-═══════════════════════════════════════════════════════ -->
+﻿
 
 <Slide2 topic="Python Strings">
   <template #content>

@@ -1,10 +1,4 @@
-﻿---
-transition: slide-up
----
-
-<!-- ═══════════════════════════════════════════════════════
-     SLIDE 14 — STRING FORMATTING
-═══════════════════════════════════════════════════════ -->
+﻿
 
 <Slide2 topic="Python Strings">
   <template #content>

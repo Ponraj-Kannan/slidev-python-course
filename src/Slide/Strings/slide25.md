@@ -1,10 +1,4 @@
-﻿---
-transition: slide-up
----
-
-<!-- ═══════════════════════════════════════════════════════
-     SLIDE 25 — COMMON MISTAKES & BEST PRACTICES (PART 1)
-═══════════════════════════════════════════════════════ -->
+﻿
 
 <Slide2 topic="Python Strings">
   <template #content>

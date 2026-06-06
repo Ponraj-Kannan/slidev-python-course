@@ -1,10 +1,4 @@
-﻿---
-transition: slide-up
----
-
-<!-- ═══════════════════════════════════════════════════════
-     SLIDE 16 — ESCAPE CHARACTERS
-═══════════════════════════════════════════════════════ -->
+﻿
 
 <Slide2 topic="Python Strings">
   <template #content>

@@ -1,11 +1,3 @@
----
-transition: slide-up
----
-
-<!-- ═══════════════════════════════════════════════════════
-     SLIDE 04 — ACCESSING CHARACTERS
-═══════════════════════════════════════════════════════ -->
-
 <Slide2 topic="Python Strings">
   <template #content>
 

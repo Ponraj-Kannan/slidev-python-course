@@ -1,11 +1,3 @@
----
-transition: slide-up
----
-
-<!-- ═══════════════════════════════════════════════════════
-     SLIDE 06 — STRING SLICING
-═══════════════════════════════════════════════════════ -->
-
 <Slide2 topic="Python Strings">
   <template #content>
 

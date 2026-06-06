@@ -2,10 +2,6 @@
 transition: slide-up
 ---
 
-<!-- ═══════════════════════════════════════════════════════
-     SLIDE 17 — MULTILINE STRINGS
-═══════════════════════════════════════════════════════ -->
-
 <Slide2 topic="Python Strings">
   <template #content>
 

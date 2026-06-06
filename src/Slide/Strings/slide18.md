@@ -1,10 +1,4 @@
----
-transition: slide-up
----
 
-<!-- ═══════════════════════════════════════════════════════
-     SLIDE 18 — STRING COMPARISON
-═══════════════════════════════════════════════════════ -->
 
 <Slide2 topic="Python Strings">
   <template #content>

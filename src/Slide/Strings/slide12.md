@@ -1,11 +1,3 @@
----
-transition: slide-up
----
-
-<!-- ═══════════════════════════════════════════════════════
-     SLIDE 12 — STRING METHODS: SPLIT & JOIN
-═══════════════════════════════════════════════════════ -->
-
 <Slide2 topic="Python Strings">
   <template #content>
 

@@ -1,12 +1,4 @@
-﻿---
-transition: slide-up
----
-
-<!-- ═══════════════════════════════════════════════════════
-     SLIDE 03 — STRING CHARACTERISTICS
-═══════════════════════════════════════════════════════ -->
-
-<Slide2 topic="Python Strings">
+﻿<Slide2 topic="Python Strings">
   <template #content>
 
 <div class="slide-h1" style="margin-bottom:10px;">String <span class="highlight">Characteristics</span></div>

@@ -1,10 +1,3 @@
----
-transition: slide-up
----
-
-<!-- ═══════════════════════════════════════════════════════
-     SLIDE 21 — REAL-WORLD EXAMPLES (PART 1)
-═══════════════════════════════════════════════════════ -->
 
 <Slide2 topic="Python Strings">
   <template #content>

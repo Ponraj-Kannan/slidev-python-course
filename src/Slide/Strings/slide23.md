@@ -1,10 +1,4 @@
----
-transition: slide-up
----
 
-<!-- ═══════════════════════════════════════════════════════
-     SLIDE 23 — PRACTICE PROGRAMS (PART 1)
-═══════════════════════════════════════════════════════ -->
 
 <Slide2 topic="Python Strings">
   <template #content>

@@ -1,11 +1,3 @@
----
-transition: slide-up
----
-
-<!-- ═══════════════════════════════════════════════════════
-     SLIDE 08 — STRING CONCATENATION & REPETITION
-═══════════════════════════════════════════════════════ -->
-
 <Slide2 topic="Python Strings">
   <template #content>
 

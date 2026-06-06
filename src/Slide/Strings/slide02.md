@@ -1,12 +1,4 @@
-﻿---
-transition: slide-up
----
-
-<!-- ═══════════════════════════════════════════════════════
-     SLIDE 02 — CREATING STRINGS IN PYTHON
-═══════════════════════════════════════════════════════ -->
-
-<Slide2 topic="Python Strings">
+﻿<Slide2 topic="Python Strings">
   <template #content>
 
 <div class="slide-h1" style="margin-bottom:10px;">Creating <span class="highlight">Strings</span></div>

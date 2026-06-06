@@ -1,10 +1,4 @@
----
-transition: slide-up
----
 
-<!-- ═══════════════════════════════════════════════════════
-     SLIDE 19 — ITERATING THROUGH STRINGS
-═══════════════════════════════════════════════════════ -->
 
 <Slide2 topic="Python Strings">
   <template #content>

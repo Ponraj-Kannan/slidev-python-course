@@ -1,12 +1,4 @@
-﻿---
-transition: slide-up
----
-
-<!-- ═══════════════════════════════════════════════════════
-     SLIDE 10 — COMMON STRING METHODS (PART 1)
-═══════════════════════════════════════════════════════ -->
-
-<Slide2 topic="Python Strings">
+﻿<Slide2 topic="Python Strings">
   <template #content>
 
 <div class="slide-h1" style="margin-bottom:10px;">String <span class="highlight">Methods</span> — Case &amp; Whitespace</div>

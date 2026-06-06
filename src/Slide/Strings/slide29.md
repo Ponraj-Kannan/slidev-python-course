@@ -1,10 +1,4 @@
----
-transition: slide-up
----
 
-<!-- ═══════════════════════════════════════════════════════
-     SLIDE 29 — SUMMARY (PART 2) — VISUAL CHEATSHEET
-═══════════════════════════════════════════════════════ -->
 
 <Slide2 topic="Python Strings">
   <template #content>

@@ -1,12 +1,4 @@
-﻿---
-transition: slide-up
----
-
-<!-- ═══════════════════════════════════════════════════════
-     SLIDE 11 — STRING METHODS: SEARCH & REPLACE
-═══════════════════════════════════════════════════════ -->
-
-<Slide2 topic="Python Strings">
+﻿<Slide2 topic="Python Strings">
   <template #content>
 
 <div class="slide-h1" style="margin-bottom:10px;">String Methods — <span class="highlight">Search &amp; Replace</span></div>
