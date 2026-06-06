@@ -1,30 +1,4 @@
 ---
-theme: default
-title: Python Collections — Lists, Tuples, Sets, Dictionaries
-titleTemplate: '%s'
-highlighter: shiki
-lineNumbers: true
-drawings:
-  persist: false
-transition: slide-left
-mdc: true
-colorSchema: light
-fonts:
-  sans: 'Nunito'
-  mono: 'Fira Code'
----
-
-<style>
-@import url('./styles/common.css');
-</style>
-
-<!--
-  Python Collections — entry point.
-  Each slide lives in /slides as its own .md file and is included via
-  Slidev's `src:` syntax below. Common styling is in /styles/common.css.
--->
-
----
 src: ./slides/slide1.md
 transition: slide-up
 ---
@@ -345,12 +319,26 @@ transition: slide-up
 ---
 
 ---
+src: ./template4.md
+transition: slide-up
+---
+
+---
 src: ./slides/slide34.md
 transition: slide-up
 ---
 
 ---
+src: ./template4.md
+transition: slide-up
+---
+---
 src: ./slides/slide35.md
+transition: slide-up
+---
+
+---
+src: ./template4.md
 transition: slide-up
 ---
 
@@ -360,17 +348,48 @@ transition: slide-up
 ---
 
 ---
+src: ./template4.md
+transition: slide-up
+---
+
+
+---
 src: ./slides/slide37.md
 transition: slide-up
 ---
 
 ---
-src: ./slides/slide38.md
+src: ./template4.md
 transition: slide-up
 ---
 
 ---
 src: ./slides/slide39.md
+transition: slide-up
+---
+
+---
+src: ./questions/slide16.md
+transition: slide-up
+---
+
+---
+src: ./questions/slide17.md
+transition: slide-up
+---
+
+---
+src: ./questions/slide18.md
+transition: slide-up
+---
+
+---
+src: ./questions/slide19.md
+transition: slide-up
+---
+
+---
+src: ./questions/slide20.md
 transition: slide-up
 ---
 
@@ -381,16 +400,6 @@ transition: slide-up
 
 ---
 src: ./slides/slide41.md
-transition: slide-up
----
-
----
-src: ./slides/slide42.md
-transition: slide-up
----
-
----
-src: ./slides/slide43.md
 transition: slide-up
 ---
 
