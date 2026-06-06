@@ -5,7 +5,9 @@
       <img src="../assets/logo.png" />
     </div>
     <div class="slide-body">
-      <slot name="content" /> <!-- html code here-->
+      <div class="row-main">
+        <slot name="content" /> <!-- html code here-->
+      </div>
     </div>
   </div>
 </template>
@@ -24,25 +26,25 @@ defineProps({
 </script>
 
 <style scoped>
-@import '../style.css';
 
 .slide-wrapper {
   margin-top: -10px;
   margin-left: -30px;
   width: 107%;
-  height: 65vh;
+  height: 100%;
   font-size: 0.8rem;
   font-weight: 400;
-  overflow-x: auto;
-  overflow-y: auto;
-  scrollbar-width: none;
-  padding-bottom: 100px;
+  /* background-color: #5f87c7; */
 }
 .slide-body {
   display: flex;
   flex-direction: column;
   border-radius: 4px;
-  margin-top:50px;
+  height: 100%;
+}
+
+.cont {
+  background-color: #ef5050;
 }
 
 .navbar {
@@ -52,7 +54,7 @@ defineProps({
   align-items: center;
   gap: 0.75rem;
   padding: 0 10px;
-  color: #ffffff;
+  background-color: #ffffff;
   position: fixed;
   width: 94.7%;
 }
@@ -71,5 +73,17 @@ defineProps({
   padding-left: 10px;
   margin-left: -10px;
   border-radius: 5px;
+}
+.row-main {
+  width: 100%;
+  height: 90%;
+  margin-top: 45px;
+  overflow-x: auto;
+  overflow-y: auto;
+  scrollbar-width:none;
+
+  overflow-x: auto;
+  overflow-y: auto;
+  scrollbar-width:thin;
 }
 </style>

@@ -64,12 +64,10 @@ defineProps({
   margin-top: -10px;
   margin-left: -30px;
   width: 107%;
-  height: 60vh;
+  height: 94%;
   font-size: 0.8rem;
   font-weight: 400;
-  overflow-x: auto;
-  overflow-y: auto;
-  scrollbar-width: none;
+  /* background-color: #5f87c7; */
 }
 
 .slide-body {
@@ -77,6 +75,12 @@ defineProps({
   flex-direction: column;
   border-radius: 4px;
   margin-top: 36px;
+  height: 100%;
+  width: 100%;
+
+  /* overflow-x: auto;
+  overflow-y: auto;
+  scrollbar-width:thin; */
 }
 
 .navbar {
@@ -90,6 +94,8 @@ defineProps({
   position: fixed;
   width: 94.7%;
   background-color: #ffffff;
+  margin-top: -36px;
+  /* height: 35px; */
 }
 
 .navbar > img {
@@ -118,24 +124,30 @@ defineProps({
 
 .row-main {
   width: 100%;
-  height: 50vh;
+  height: 87%;
   display: flex;
   flex-direction: row;
   margin-top: 10px;
+  /* background-color: #a9c4d2; */
 }
 
 /* ---------------------------------------------- Edit Here! ---------------------------------------------- */
 
 .col-editor {
   width: 65%;
-  height: 46vh;
+  height: 100%;
   /* background-color: palevioletred; */
 }
 
 .col-sidebar {
   width: 35%;
-  height: 54vh;
+  height: 100%;
   padding: 0 10px;
+  
+  /* background-color: pink; */
+  overflow-x: auto;
+  overflow-y: auto;
+  scrollbar-width:thin;
 }
 
 .badge {
