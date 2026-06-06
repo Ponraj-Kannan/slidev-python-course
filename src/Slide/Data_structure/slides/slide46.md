@@ -1,8 +1,6 @@
 <Slide2 topic="Quick Recap — All Four Collections">
   <template #content>
-
 <div class="slide-h1" style="margin-bottom:10px;">Quick <span class="highlight">Recap</span> — Snapshot</div>
-
 <div v-click style="margin-top:12px; display:flex; justify-content:center;">
 ```mermaid {scale: 0.6}
 graph TD
@@ -13,7 +11,6 @@ graph TD
     L -- No, unique --> SET[Set]
     L -- Need key:value --> DICT[Dictionary]
 ```
-
 </div>
   </template>
 </Slide2>
